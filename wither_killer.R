@@ -58,7 +58,7 @@ find_wither_killers <- function(dbpath, west, north, east, south, dimension = 0)
 
     g <- expand_grid(x=x,z=z)
     
-    blocks <- get_subchunk_blocks(db, g$x, g$z, dimension, subchunk=0, names_only = TRUE)
+    blocks <- get_subchunk_blocks_data(db, g$x, g$z, dimension, subchunk=0, names_only = TRUE)
     blocks <- purrr::compact(blocks)
 
     # find chunks with the most water at bedrock level
